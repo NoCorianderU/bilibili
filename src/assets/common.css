@@ -1,0 +1,107 @@
+
+body{
+  font: 12px Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select, img {
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+input, button{
+  border: none;
+  outline: none;
+}
+
+.more{
+  display: inline-block;
+  width: 12px;
+  height: 11px;
+  background: url('../images/icons.png') no-repeat -473px -218px;
+  vertical-align: -1px;
+}
+.more1{
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: url('../images/icons.png') no-repeat -475px -218px;
+  vertical-align: -1px;
+}
+.refresh{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url('../images/icons.png') no-repeat -475px -89px;
+  vertical-align: -2px;
+  margin-right: 5px;
+}
+.empty{
+  display: block;
+  width: 102px;
+  padding-left: 24px;
+  padding-top: 1px;
+  margin-left: 79px;
+  margin-top: 9px;
+  color: #99A2AA;
+  background: url('../images/empty-icon.png') no-repeat -151px -599px;
+}
+
+@keyframes rotate {
+  to{
+    transform: rotateZ(360deg)
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+  }
+  50%{
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes show {
+  50%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+
+.container{
+  width: 1160px;
+  margin: 0 auto;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix::before,.clearfix::after{
+  content: '';
+  height: 0;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+.clearfix{
+  zoom: 1;
+}
