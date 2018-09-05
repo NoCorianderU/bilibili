@@ -12,7 +12,7 @@
       </ul>
       <a href="" class="timeBtn">新番时间表 ></a>
     </div>
-    <div v-if="!test" class="lazyBox">
+    <div v-if="test" class="lazyBox">
       <span>今天没有番剧更新</span>
     </div>
     <div class="bangumilist" v-else>

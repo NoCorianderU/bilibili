@@ -1,12 +1,12 @@
 <template>
   <div class="rankList">
     <h3>排行</h3>
-    <LazyBox v-if="!test"></LazyBox>
-    <ul class="time" v-if="test">
+    <LazyBox v-if="test"></LazyBox>
+    <ul class="time" v-if="!test">
       <li>三日<span class="down"></span></li>
       <li class="hide"><a href="javascript:;">一周</a></li>
     </ul>
-    <ul class="list" v-if="test">
+    <ul class="list" v-if="!test">
       <li v-for="(item, i) in data" :key="i" v-if="i < listLength">
         <i>{{ i+1 }}</i>
         <a href="" :title="item.name+' 播放量'+item.times">{{ item.name }}<span>全13话</span></a>
@@ -24,7 +24,7 @@
         </div>
       </li>
     </ul>
-    <a href="" class="moreVideos" v-if="test">查看更多<span class="more"></span></a>
+    <a href="" class="moreVideos" v-if="!test">查看更多<span class="more"></span></a>
   </div>
 </template>
 

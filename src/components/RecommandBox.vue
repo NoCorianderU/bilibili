@@ -2,8 +2,8 @@
     <div class="recommandList">
       <LazyBox v-if="test"></LazyBox>
       <ul v-else>
-        <!-- <li v-for="list in 8" :key="list"> -->
-        <li>
+        <li v-for="list in 8" :key="list">
+        <!-- <li> -->
           <router-link to="/video/1" target="_blank">
             <img src="../images/b1.jpg" alt="">
             <p class="title">史上最BUG的世界杯</p>

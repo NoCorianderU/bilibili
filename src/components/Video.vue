@@ -67,13 +67,13 @@
             </div>
             <div class="listIndex">
               <ul>
-                <li class="active"><a href="javascript:;">推荐视频</a></li>
-                <li><a href="javascript:;">弹幕列表</a></li>
-                <li><a href="javascript:;">屏蔽设定</a></li>
+                <li :class="{'active': index === 1}" @click="changeIndex(1)"><a href="javascript:;">推荐视频</a></li>
+                <li :class="{'active': index === 2}" @click="changeIndex(2)"><a href="javascript:;">弹幕列表</a></li>
+                <li :class="{'active': index === 3}" @click="changeIndex(3)"><a href="javascript:;">屏蔽设定</a></li>
               </ul>
             </div>
             <div class="listContent">
-              <!-- <EasyScrollbar :barOption="myBarOption">
+              <EasyScrollbar :barOption="myBarOption" v-if="index === 1">
                 <div class="recomVideos">
                   <ul>
                     <li v-for="i in 20" :key="i">
@@ -90,8 +90,8 @@
                     </li>
                   </ul>
                 </div>
-              </EasyScrollbar> -->
-              <!-- <EasyScrollbar :barOption="myBarOption">
+              </EasyScrollbar>
+              <EasyScrollbar :barOption="myBarOption" v-if="index === 2">
                 <div class="danmuList">
                   <ul>
                     <li>
@@ -195,8 +195,8 @@
                     </li>
                   </ul>
                 </div>
-              </EasyScrollbar> -->
-              <!-- <div class="banList">
+              </EasyScrollbar>
+              <div class="banList" v-if="index === 3">
                 <div class="banSetting clearfix">
                   <a href="" class="banBtn fl">屏蔽列表<span></span></a>
                   <a href="" class="downList fr"><span class="iconfont icon-update"></span>同步屏蔽列表</a>
@@ -230,7 +230,7 @@
                     </ul>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
           <div class="video fl">
@@ -672,6 +672,7 @@ export default {
 
   data () {
     return {
+      index: 1,
       showAll: false,
       myBarOption: {
         barColor: "#6D757A",
@@ -716,6 +717,10 @@ export default {
   },
 
   methods: {
+    changeIndex (index) {
+      this.index = index
+    },
+
     showList (flag) {
       this.showAll = flag
     },
@@ -731,6 +736,7 @@ export default {
     gifBack (obj) {
       this.$imgAnim.gifBack(obj)
     },
+
   }
 
 }
@@ -1266,12 +1272,6 @@ export default {
             height: 584px;
             ul {
               padding-top: 5px;
-              a {
-                color: #99A2AA;
-                span {
-                  display: inline-block;
-                }
-              }
               li {
                 height: 24px;
                 line-height: 24px;
@@ -1279,6 +1279,22 @@ export default {
                   height: 22px;
                   line-height: 22px;
                   margin-bottom: 5px;
+                  &:hover {
+                    a {
+                      color: #99A2AA;
+                    }
+                  }
+                }
+                &:hover {
+                  a {
+                    color: #00A1D6;
+                  }
+                }
+                a {
+                  color: #99A2AA;
+                  span {
+                    display: inline-block;
+                  }
                 }
                 .time {
                   width: 46px;

@@ -9,7 +9,7 @@
       <li v-for="a in 5" :key="a" :style="between">
         <a href="">
           <img src="../images/ad1.webp" alt="">
-          <p title="辗转万千世界，今日能否遇到你的命运之子呢？">辗转万千世界，今日能否遇到你的命运之子呢？</p>
+          <p title="XXXXXXXXXXXXXXXXXXXX">XXXXXXXXXXXXXXXXXXXX</p>
           <div class="info">
             <span>1:50</span>
             <a href="javascript:;">
@@ -43,7 +43,7 @@ export default {
 
   data () {
     return {
-      test: true
+      test: false
     }
   }
 }

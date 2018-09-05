@@ -12,8 +12,8 @@
       <li>三日<span class="down"></span></li>
       <li class="hide"><a href="javascript:;">一周</a></li>
     </ul>
-    <LazyBox v-if="!test" :toLeft="true"></LazyBox>
-    <div class="listBox clearfix" :style="transX" v-if="test">
+    <LazyBox v-if="test" :toLeft="true"></LazyBox>
+    <div class="listBox clearfix" :style="transX" v-if="!test">
       <ul class="list">
         <li>
           <i>1</i>
@@ -87,7 +87,7 @@
         </li>
       </ul>
     </div>
-    <a href="" class="moreVideos" v-if="test">查看更多<span class="more"></span></a>
+    <a href="" class="moreVideos" v-if="!test">查看更多<span class="more"></span></a>
   </div>
 </template>
 

@@ -24,7 +24,7 @@ export default {
 
   data () {
     return {
-      test: false,
+      test: true,
       timer: '',
       translate: '',
       transition: '',
