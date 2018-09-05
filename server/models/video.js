@@ -48,7 +48,6 @@ const videoSchema = new mongoose.Schema({
 })
 
 videoSchema.pre('save', function (next) {
-  console.log(this)
   next()
 })
 
